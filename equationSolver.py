@@ -23,10 +23,8 @@ def solveEquation(stringToSolve):
         elif inputArray[i] == '-':
             removalArray.append(i)            
             inputArray[i+1] = 0 - inputArray[i+1]
-    for i in range(len(removalArray)):
-        print(inputArray,removalArray)
-        inputArray.pop(removalArray[i])
-    
+    inputArray.remove("+")
+    inputArray.remove("-") 
     print(inputArray)            
     return
 
